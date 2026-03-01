@@ -75,15 +75,17 @@ export const ConsultationForm: React.FC = () => {
     setStatus("SUBMITTING");
     
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
     
     try {
       const response = await fetch("https://submit-form.com/QUP7IIe7z", {
         method: "POST",
-        body: data,
         headers: {
-          'Accept': 'application/json'
-        }
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
       });
       
       if (response.ok) {
