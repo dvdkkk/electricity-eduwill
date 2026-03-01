@@ -78,7 +78,7 @@ export const ConsultationForm: React.FC = () => {
     const data = new FormData(form);
     
     try {
-      const response = await fetch("https://formspree.io/f/mvzzjrgz", {
+      const response = await fetch("https://submit-form.com/QUP7IIe7z", {
         method: "POST",
         body: data,
         headers: {
