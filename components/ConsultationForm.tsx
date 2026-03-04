@@ -79,7 +79,7 @@ export const ConsultationForm: React.FC = () => {
     const data = Object.fromEntries(formData.entries());
     
     try {
-      const response = await fetch("https://formspree.io/f/mvzzjrgz", {
+      const response = await fetch("https://inputhaven.com/api/v1/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -157,6 +157,7 @@ export const ConsultationForm: React.FC = () => {
                   <form onSubmit={handleSubmit} className="space-y-3">
                   {/* IP 주소 수집용 히든 필드 (user_ip) */}
                   <input type="hidden" name="user_ip" value={ipAddress} />
+                  <input type="hidden" name="_form_id" value="3fa060f52bb14270046ecce41d896bc4" />
 
                   <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
                       빠른 교육상담 신청
