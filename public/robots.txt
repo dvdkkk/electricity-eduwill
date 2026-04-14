@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://electricity-eduwill.vercel.app/sitemap.xml
