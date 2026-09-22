@@ -125,3 +125,18 @@ export const TARGET_AUDIENCE = [
   "전기기기 설비업체 관련 직종 및 전기실 관련 인력",
   "전기기능사 자격증을 취득하여 취업하려는 구직자"
 ];
+
+export const NAVER_FORM_URL = "https://naver.me/Gi0mBpRu";
+
+export const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  // 모바일 환경 감지: 모바일 UserAgent 또는 터치 기반 모바일/태블릿 화면
+  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+    (window.innerWidth < 1024 && ('ontouchstart' in window || navigator.maxTouchPoints > 0));
+
+  if (!isMobile) {
+    // PC 환경일 경우 기본 tel: 동작을 방지하고 상담신청 링크를 새 창으로 오픈
+    e.preventDefault();
+    window.open(NAVER_FORM_URL, "_blank", "noopener,noreferrer");
+  }
+  // 모바일 환경에서는 기본 href="tel:..." 동작이 수행되어 전화 다이얼러로 연결됩니다.
+};

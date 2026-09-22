@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { handlePhoneClick } from '../constants';
 
 export const Footer: React.FC = () => {
   useEffect(() => {
@@ -31,7 +32,9 @@ export const Footer: React.FC = () => {
                 <p className="font-bold text-zinc-400 mb-2">고객센터</p>
                 <a 
                   href="tel:18775280" 
-                  className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors md:pointer-events-none md:cursor-default md:hover:text-white inline-block"
+                  onClick={handlePhoneClick}
+                  className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors inline-block cursor-pointer"
+                  title="고객센터 1877-5280"
                 >
                   1877-5280
                 </a>
