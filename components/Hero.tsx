@@ -58,9 +58,8 @@ export const Hero: React.FC = () => {
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <a 
-            href="https://naver.me/Gi0mBpRu" 
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#consultation" 
+            onClick={(e) => handleNavClick(e, '#consultation')}
             className="group w-full md:w-auto px-7 py-3.5 bg-yellow-400 hover:bg-yellow-300 text-black text-lg font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
           >
             국비지원 무료상담 신청하기
